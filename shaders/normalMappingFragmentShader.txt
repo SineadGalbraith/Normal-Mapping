@@ -1,0 +1,39 @@
+#version 330
+out vec4 FragColor;
+
+in vec3 fragPosTS;
+in vec3 lightPosTS;
+in vec3 viewPosTS;
+in vec2 texCoords;
+in vec3 normalIn;
+
+uniform sampler2D diffuseMap;
+uniform sampler2D normalMap;
+uniform bool mappingOn = false;
+void main()
+{
+  vec3 normal;
+
+  if(mappingOn) {
+    normal = texture(normalMap, texCoords).rgb;
+    normal = normalize(normal * 2.0 - 1.0);
+  }
+  else {
+    normal = normalize(normalIn);
+  }
+
+  vec3 color = texture(diffuseMap, texCoords).rgb;
+
+  vec3 ambient = 0.6 * color;
+
+  vec3 lightDir = normalize(lightPosTS - fragPosTS);
+  float diff = max(dot(lightDir, normal), 0.0);
+  vec3 diffuse = diff * color;
+
+  vec3 viewDir = normalize(viewPosTS - fragPosTS);
+  vec3 halfwayDir = normalize(lightDir + viewDir);
+  float spec = pow(max(dot(normal, halfwayDir), 0.0), 32.0);
+  vec3 specular = vec3(0.2) * spec;
+
+  FragColor = vec4(ambient + diffuse + specular, 1.0);
+}

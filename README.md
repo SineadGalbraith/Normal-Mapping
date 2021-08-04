@@ -11,4 +11,4 @@ C/C++ and OpenGL have been used for this assignment.
 
 ## Video Demo
 
-A video demonstration of this assignment can be found at: 
+A video demonstration of this assignment can be found at: https://youtu.be/CMALUem4aY8

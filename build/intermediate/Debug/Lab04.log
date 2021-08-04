@@ -1,0 +1,7 @@
+﻿  main.cpp
+c:\users\sgal\documents\5th year\cs7gv3 - real-time rendering\assignments\labs\lab 3\lab 3\lab04\main.cpp(375): warning C4018: '<': signed/unsigned mismatch
+c:\users\sgal\documents\5th year\cs7gv3 - real-time rendering\assignments\labs\lab 3\lab 3\lab04\main.cpp(363): warning C4101: 'height': unreferenced local variable
+c:\users\sgal\documents\5th year\cs7gv3 - real-time rendering\assignments\labs\lab 3\lab 3\lab04\main.cpp(363): warning C4101: 'nrChannels': unreferenced local variable
+c:\users\sgal\documents\5th year\cs7gv3 - real-time rendering\assignments\labs\lab 3\lab 3\lab04\main.cpp(363): warning C4101: 'width': unreferenced local variable
+c:\users\sgal\documents\5th year\cs7gv3 - real-time rendering\assignments\labs\lab 3\lab 3\lab04\main.cpp(364): warning C4101: 'data': unreferenced local variable
+  Lab04.vcxproj -> C:\Users\sgal\Documents\5th Year\CS7GV3 - Real-Time Rendering\Assignments\Labs\Lab 3\Lab 3\\build\executables\Debug\Lab 04.exe
